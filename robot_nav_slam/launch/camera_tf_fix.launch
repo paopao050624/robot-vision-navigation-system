@@ -1,0 +1,15 @@
+<launch>
+  <!-- Auto-generated TF fix for RTAB-Map RGB-D input -->
+
+  <!-- RGB camera_info frame_id: camera_rgb_optical_frame -->
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="base_to_rgb_camera_frame"
+        args="0.08 0.0 0.18 0 0 0 base_footprint camera_rgb_optical_frame 100" />
+
+  <!-- Depth camera_info frame_id: camera_rgb_optical_frame -->
+  <node pkg="tf"
+        type="static_transform_publisher"
+        name="base_to_depth_camera_frame"
+        args="0.08 0.0 0.18 0 0 0 base_footprint camera_rgb_optical_frame 100" />
+</launch>
